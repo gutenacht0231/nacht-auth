@@ -1,0 +1,23 @@
+{
+    "networth": {
+        "apiKey": ""
+    },
+
+    "URLS": {
+        "apiURL": ""
+    },
+
+    "webhook": {
+        "webhookURL": ""
+    },
+
+    "discord": {
+        "bot_token": ""
+    },
+
+    "azure" : {
+        "client_id": "",
+        "client_secret": "",
+        "redirect_uri": ""
+    }
+}
