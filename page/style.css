@@ -1,0 +1,254 @@
+/* poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* set the background image to bg.png */
+    background: url('./img/layered-peaks-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background: linear-gradient(135deg, rgba(8, 43, 78, .8), rgba(8, 43, 78, 0.3));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out;
+    border-radius: 10px;
+    transform: translateX(-7px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    animation: fadeIn 0.25s ease-in-out;
+    backdrop-filter: blur(7px);
+}
+.navbar-title {
+    margin: 0;
+    padding: 16px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar-title img {
+    width: 80px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.navbar-title img:hover {
+    transition: all ease 0.5s;
+    transform: scale(1.1);
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-option {
+    padding: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.navbar-minimize {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transform: translateY(-10px), translateX(10px);
+    transition: all 0.3s ease-in-out;
+}
+.navbar-minimize:hover {
+    color: #fff;
+}
+
+.screen {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    bottom: 15%;
+    background: linear-gradient(135deg, rgba(8, 43, 78, .9), rgba(8, 43, 78, .3));
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 0.25s ease-in-out;
+    backdrop-filter: blur(7px);
+
+}
+
+  .screen.active {
+    display: block;
+}
+
+  .screen .title-text {
+    margin: 0;
+    padding: 16px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sessions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    overflow-y: auto;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.5));
+    border-radius: 10px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    scroll-snap-align: start;
+}
+
+.sessions button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #082b4e 0%, #5daee4 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sessions .networth {
+    color: rgb(202, 172, 0);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 2px 20px rgb(202, 172, 0);
+    }
+    50% {
+        text-shadow: 0 2px 30px rgb(202, 172, 0);
+    }
+    100% {
+        text-shadow: 0 2px 20px rgb(202, 172, 0);
+    }
+}
+
+#list {
+    overflow-y: auto;
+    height: 88%;
+    scroll-snap-type: y mandatory;
+}
+  
+  #list > div {
+    height: auto;
+}
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+.download-nachtauth-button {
+    margin: 10px;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #082b4e 0%, #5daee4 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.download-nachtauth-button:hover {
+    animation: rotate-gradient-angle 3s ease-in-out infinite;
+}
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.nachtauth-question {
+    margin-top: 10px;
+    padding: 16px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nachtauth-description {
+    margin: 0;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.download-nachtauth-button img {
+    width: 80px;
+    height: 75px;
+    margin: 0 auto;
+    display: block;
+}

